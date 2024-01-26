@@ -10,23 +10,40 @@ public class CollisionGagSource : GagSource
 	[Tooltip("Colliding with objects on these layer will perform a failed gag")]
 	public LayerMask FailMask;
 
+	[Tooltip("The minimum number of seconds between gag performances")]
+	[Min(0f)]
+	public float Cooldown = 0f;
+
+	public float CooldownEndTime { get; private set; } = 0f;
+
 	[Tooltip("Invoked when this performs a successful gag")]
 	public UnityEvent OnSuccess = new();
 
 	[Tooltip("Invoked when this performs a failed gag")]
 	public UnityEvent OnFail = new();
 
-	private void OnCollisionEnter(Collision collision)
+	private void CheckCollision(Collision collision)
 	{
-		if (this.SuccessMask.HasLayer(collision.gameObject.layer))
+		if (this.CooldownEndTime > Time.time)
+			return;
+		bool is_success = this.SuccessMask.HasLayer(collision.gameObject.layer);
+		bool is_fail = this.FailMask.HasLayer(collision.gameObject.layer);
+		if (is_success || is_fail)
+			this.CooldownEndTime = Time.time + this.Cooldown;
+		if (is_success)
 		{
 			this.SendGag(false);
 			this.OnSuccess.Invoke();
 		}
-		if (this.FailMask.HasLayer(collision.gameObject.layer))
+		if (is_fail)
 		{
 			this.SendGag(true);
 			this.OnFail.Invoke();
 		}
+	}
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		this.CheckCollision(collision);
 	}
 }

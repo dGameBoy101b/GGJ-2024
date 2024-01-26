@@ -1,0 +1,8 @@
+#IDEs
+.vs
+.vscode
+
+#FMOD Studio
+.unsaved
+.user
+.cache

@@ -108,21 +108,25 @@ public class LaughOMeter : MonoBehaviour
 
 	private void IncrementRecencyPenalty(GagSource.Gag gag)
 	{
+		if (gag.IsFailed)
+			return;
 		if (!this.RecencyPenalties.ContainsKey(gag.Type))
 			this._recencyPenalties.Add(gag.Type, 0);
 		this._recencyPenalties[gag.Type] = Mathf.Min(this.RecencyPenaltyMaximum, this._recencyPenalties[gag.Type] + this.RecencyPenaltyIncrement);
 	}
 	#endregion
 
-	private float ScoreGag(GagSource.Gag gag)
+	private float CalculateGagScore(GagSource.Gag gag)
 	{
 		float recency_penalty = this.GetRecencyPenalty(gag);
-		return Mathf.Max(0, gag.BasePoints - recency_penalty);
+		return gag.IsFailed 
+			? -gag.BasePoints
+			: Mathf.Max(0, gag.BasePoints - recency_penalty);
 	}
 
 	public void AddGag(GagSource.Gag gag)
 	{
-		float points = this.ScoreGag(gag);
+		float points = this.CalculateGagScore(gag);
 		this.IncrementRecencyPenalty(gag);
 		this.CurrentPoints = Mathf.Clamp(this.CurrentPoints + points, this.PointsMinimum, this.PointsMaximum);
 		this._gagHistory.Add(new(gag, points));

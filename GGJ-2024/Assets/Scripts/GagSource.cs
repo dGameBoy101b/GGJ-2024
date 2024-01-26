@@ -16,18 +16,20 @@ public class GagSource : MonoBehaviour
 		public readonly GagSource Source;
 		public readonly float BasePoints;
 		public readonly string Type;
+		public readonly bool IsFailed;
 
-		public Gag(GagSource source, float base_points, string type)
+		public Gag(GagSource source, float base_points, string type, bool is_failed)
 		{
 			this.Source = source;
 			this.BasePoints = base_points;
 			this.Type = type;
+			this.IsFailed = is_failed;
 		}
 	}
 
-	public void SendGag()
+	public void SendGag(bool failed)
 	{
-		Gag gag = new(this, this.BasePoints, this.GagType);
+		Gag gag = new(this, this.BasePoints, this.GagType, failed);
 		LaughOMeter.Instance.AddGag(gag);
 	}
 }

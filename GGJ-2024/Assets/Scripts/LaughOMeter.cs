@@ -8,7 +8,7 @@ public class LaughOMeter : MonoBehaviour
 {
 	#region Points
 	[Header("Points")]
-	[Tooltip("The maximum number of points on the laugh o meter")]
+	[Tooltip("The minimum number of points on the laugh o meter")]
 	public float PointsMinimum = -100f;
 
 	[Tooltip("The maximum number of points on the laugh o meter")]

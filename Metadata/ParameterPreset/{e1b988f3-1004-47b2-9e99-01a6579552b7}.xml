@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{e1b988f3-1004-47b2-9e99-01a6579552b7}">
+		<property name="name">
+			<value>Gag Points</value>
+		</property>
+		<relationship name="folder">
+			<destination>{165acec4-5554-4415-ab43-1d0edefd373a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{00de1d8b-1579-4e8a-a532-c3a0bb91ea25}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{00de1d8b-1579-4e8a-a532-c3a0bb91ea25}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

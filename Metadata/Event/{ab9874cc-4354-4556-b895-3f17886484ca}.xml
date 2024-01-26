@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{ab9874cc-4354-4556-b895-3f17886484ca}">
 		<property name="name">
-			<value>Music</value>
+			<value>Level Music</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
 		</property>
 		<relationship name="folder">
-			<destination>{78ca3954-b708-483f-b173-d611ee49cc7c}</destination>
+			<destination>{244decdf-5f5b-44e1-85b4-97dd35ae2075}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{0a7aeb7b-4920-4ecc-898d-8f096cdfabe1}</destination>
@@ -30,6 +30,7 @@
 		</relationship>
 		<relationship name="banks">
 			<destination>{2c3273fe-a704-4689-b08e-80bbabe2f36e}</destination>
+			<destination>{892b3419-1f25-4561-bc9c-840147be1dc9}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{0a7aeb7b-4920-4ecc-898d-8f096cdfabe1}">

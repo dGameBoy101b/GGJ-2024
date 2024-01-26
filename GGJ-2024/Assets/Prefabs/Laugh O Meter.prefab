@@ -122,8 +122,8 @@ GameObject:
   - component: {fileID: 2529686056346007426}
   - component: {fileID: 2232556239494362107}
   - component: {fileID: 6461459190190865515}
-  - component: {fileID: 6950107739425418416}
   - component: {fileID: 8523464806595411379}
+  - component: {fileID: 296330144844351654}
   m_Layer: 0
   m_Name: Laugh O Meter
   m_TagString: Untagged
@@ -224,9 +224,8 @@ MonoBehaviour:
   OnGagAdded:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6950107739425418416}
-        m_TargetAssemblyTypeName: WinterwireGames.FMODParameters.FMODGlobalParameter,
-          WinterwireGames.FMODParameters
+      - m_Target: {fileID: 296330144844351654}
+        m_TargetAssemblyTypeName: WinterwireGames.FMODParamaters.FMODParameter, WinterwireGames.FMODParameters
         m_MethodName: set_Value
         m_Mode: 0
         m_Arguments:
@@ -255,19 +254,6 @@ MonoBehaviour:
   OnHitMinimum:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6950107739425418416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5423887157780531010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4516362e4e341c5459b463bde92c90d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParameterName: Gag Points
 --- !u!114 &8523464806595411379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +285,20 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: -1
   OverrideMaxDistance: -1
+--- !u!114 &296330144844351654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423887157780531010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0b6737a85e99f49af08e2971e5cb2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _emitter: {fileID: 8523464806595411379}
+  ParameterName: Gag Points
 --- !u!1 &8357537592516817275
 GameObject:
   m_ObjectHideFlags: 0

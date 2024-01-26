@@ -7,6 +7,19 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Slider))]
 public class LaughOMeter : MonoBehaviour
 {
+	#region Points
+	[Header("Points")]
+	[Tooltip("The maximum number of points on the laugh o meter")]
+	public float PointsMinimum = -100f;
+
+	[Tooltip("The maximum number of points on the laugh o meter")]
+	public float PointsMaximum = 100f;
+
+	[Tooltip("The number of points initially on the laugh o meter")]
+	private float InitialPoints = 0f;
+
+	public float CurrentPoints { get; private set; }
+
 	private Slider _slider = null;
 	public Slider Slider
 	{
@@ -17,6 +30,14 @@ public class LaughOMeter : MonoBehaviour
 			return this._slider;
 		}
 	}
+
+	private void UpdateSlider()
+	{
+		this.Slider.maxValue = this.PointsMaximum;
+		this.Slider.minValue = this.PointsMinimum;
+		this.Slider.value = this.CurrentPoints;
+	}
+	#endregion
 
 	#region Singleton
 	public static LaughOMeter Instance { get; private set; } = null;
@@ -103,17 +124,20 @@ public class LaughOMeter : MonoBehaviour
 	{
 		float points = this.ScoreGag(gag);
 		this.IncrementRecencyPenalty(gag);
+		this.CurrentPoints = Mathf.Clamp(this.CurrentPoints + points, this.PointsMinimum, this.PointsMaximum);
 		this._gagHistory.Add(new(gag, points));
 	}
 
 	private void Update()
 	{
 		this.UpdateRecencyPenalties(Time.deltaTime);
+		this.UpdateSlider();
 	}
 
 	private void Awake()
 	{
 		this.SetSingletonInstance();
+		this.CurrentPoints = this.InitialPoints;
 	}
 
 	private void OnDestroy()

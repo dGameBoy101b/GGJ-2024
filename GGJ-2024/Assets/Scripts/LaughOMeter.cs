@@ -36,11 +36,11 @@ public class LaughOMeter : MonoBehaviour
 
 	public readonly struct GagEvent
 	{
-		readonly Gag Gag;
-		readonly float Time;
-		readonly float Points;
+		public readonly GagSource.Gag Gag;
+		public readonly float Time;
+		public readonly float Points;
 
-		public GagEvent(Gag gag, float points)
+		public GagEvent(GagSource.Gag gag, float points)
 		{
 			this.Gag = gag;
 			this.Points = points;
@@ -52,12 +52,12 @@ public class LaughOMeter : MonoBehaviour
 
 	public IReadOnlyCollection<GagEvent> GagHistory => this._gagHistory;
 
-	private float ScoreGag(Gag gag) //stub
+	private float ScoreGag(GagSource.Gag gag) //stub
 	{
-		return 0;
+		return gag.BasePoints;
 	}
 
-	public void AddGag(Gag gag)
+	public void AddGag(GagSource.Gag gag)
 	{
 		float points = this.ScoreGag(gag);
 		this._gagHistory.Add(new(gag, points));

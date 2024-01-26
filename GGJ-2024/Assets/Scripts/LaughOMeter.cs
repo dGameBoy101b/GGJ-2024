@@ -17,6 +17,10 @@ public class LaughOMeter : MonoBehaviour
 	[Tooltip("The number of points initially on the laugh o meter")]
 	public float InitialPoints = 0f;
 
+	[Tooltip("The rate at which the laugh o meter drains passively in points per second")]
+	[Min(0)]
+	public float PointsDrainRate = 5f;
+
 	public float CurrentPoints { get; private set; }
 
 	private Slider _slider = null;
@@ -35,6 +39,11 @@ public class LaughOMeter : MonoBehaviour
 		this.Slider.value = this.CurrentPoints;
 	}
 
+	private void UpdatePoints(float delta_time)
+	{
+		this.AddPoints(-this.PointsDrainRate * delta_time);
+	}
+
 	private void InitialisePoints()
 	{
 		this.CurrentPoints = this.InitialPoints;
@@ -45,6 +54,16 @@ public class LaughOMeter : MonoBehaviour
 		this.Slider.maxValue = this.PointsMaximum;
 		this.Slider.minValue = this.PointsMinimum;
 		this.Slider.value = this.CurrentPoints;
+	}
+
+	private void AddPoints(float points)
+	{
+		float total_points = this.CurrentPoints + points;
+		this.CurrentPoints = Mathf.Clamp(total_points, this.PointsMinimum, this.PointsMaximum);
+		if (total_points >= this.PointsMaximum)
+			this.OnHitMaximum.Invoke();
+		if (total_points <= this.PointsMinimum)
+			this.OnHitMinimum.Invoke();
 	}
 	#endregion
 
@@ -84,6 +103,23 @@ public class LaughOMeter : MonoBehaviour
 	private readonly List<GagEvent> _gagHistory = new();
 
 	public IReadOnlyCollection<GagEvent> GagHistory => this._gagHistory;
+
+	private float CalculateGagScore(GagSource.Gag gag)
+	{
+		float recency_penalty = this.GetRecencyPenalty(gag);
+		return gag.IsFailed
+			? -gag.BasePoints
+			: Mathf.Max(0, gag.BasePoints - recency_penalty);
+	}
+
+	public void AddGag(GagSource.Gag gag)
+	{
+		float points = this.CalculateGagScore(gag);
+		this.IncrementRecencyPenalty(gag);
+		this._gagHistory.Add(new(gag, points));
+		this.AddPoints(points);
+		this.OnGagAdded.Invoke(points);
+	}
 	#endregion
 
 	#region Recency Penalties
@@ -137,32 +173,9 @@ public class LaughOMeter : MonoBehaviour
 	public UnityEvent OnHitMinimum = new();
 	#endregion
 
-	private float CalculateGagScore(GagSource.Gag gag)
-	{
-		float recency_penalty = this.GetRecencyPenalty(gag);
-		return gag.IsFailed 
-			? -gag.BasePoints
-			: Mathf.Max(0, gag.BasePoints - recency_penalty);
-	}
-
-	public void AddGag(GagSource.Gag gag)
-	{
-		float points = this.CalculateGagScore(gag);
-		float total_points = this.CurrentPoints + points;
-		this.IncrementRecencyPenalty(gag);
-		bool hit_max = total_points >= this.PointsMaximum;
-		bool hit_min = total_points <= this.PointsMinimum;
-		this.CurrentPoints = Mathf.Clamp(total_points, this.PointsMinimum, this.PointsMaximum);
-		this._gagHistory.Add(new(gag, points));
-		this.OnGagAdded.Invoke(points);
-		if (hit_max)
-			this.OnHitMaximum.Invoke();
-		if (hit_min)
-			this.OnHitMinimum.Invoke();
-	}
-
 	private void Update()
 	{
+		this.UpdatePoints(Time.deltaTime);
 		this.UpdateRecencyPenalties(Time.deltaTime);
 		this.UpdateSlider();
 	}

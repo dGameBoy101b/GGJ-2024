@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -129,10 +127,13 @@ public class LaughOMeter : MonoBehaviour
 
 	#region Events
 	[Header("Events")]
-	[Tooltip("Invoked when the maximum point threshold is hit")]
+	[Tooltip("Invoked when a gag is performed with the number of points scored from it.\nFailed gags will have negative points")]
+	public UnityEvent<float> OnGagAdded = new();
+
+	[Tooltip("Invoked when the maximum point threshold is crossed")]
 	public UnityEvent OnHitMaximum = new();
 
-	[Tooltip("Invoked when the minimum point threshold is hit")]
+	[Tooltip("Invoked when the minimum point threshold is crossed")]
 	public UnityEvent OnHitMinimum = new();
 	#endregion
 
@@ -146,12 +147,14 @@ public class LaughOMeter : MonoBehaviour
 
 	public void AddGag(GagSource.Gag gag)
 	{
-		float points = this.CurrentPoints + this.CalculateGagScore(gag);
+		float points = this.CalculateGagScore(gag);
+		float total_points = this.CurrentPoints + points;
 		this.IncrementRecencyPenalty(gag);
-		bool hit_max = points >= this.PointsMaximum;
-		bool hit_min = points <= this.PointsMinimum;
-		this.CurrentPoints = Mathf.Clamp(points, this.PointsMinimum, this.PointsMaximum);
+		bool hit_max = total_points >= this.PointsMaximum;
+		bool hit_min = total_points <= this.PointsMinimum;
+		this.CurrentPoints = Mathf.Clamp(total_points, this.PointsMinimum, this.PointsMaximum);
 		this._gagHistory.Add(new(gag, points));
+		this.OnGagAdded.Invoke(points);
 		if (hit_max)
 			this.OnHitMaximum.Invoke();
 		if (hit_min)

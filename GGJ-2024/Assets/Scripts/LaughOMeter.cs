@@ -18,6 +18,7 @@ public class LaughOMeter : MonoBehaviour
 		}
 	}
 
+	#region Singleton
 	public static LaughOMeter Instance { get; private set; } = null;
 
 	private void SetSingletonInstance()
@@ -33,7 +34,9 @@ public class LaughOMeter : MonoBehaviour
 		if (LaughOMeter.Instance == this)
 			LaughOMeter.Instance = null;
 	}
+	#endregion
 
+	#region Gag History
 	public readonly struct GagEvent
 	{
 		public readonly GagSource.Gag Gag;
@@ -51,16 +54,61 @@ public class LaughOMeter : MonoBehaviour
 	private readonly List<GagEvent> _gagHistory = new();
 
 	public IReadOnlyCollection<GagEvent> GagHistory => this._gagHistory;
+	#endregion
 
-	private float ScoreGag(GagSource.Gag gag) //stub
+	#region Recency Penalties
+	[Header("Receny Penalties")]
+	[Tooltip("The penalty accumulated for each instance of a gag performance")]
+	[Min(0)]
+	public float RecencyPenaltyIncrement = 10f;
+
+	[Tooltip("The rate at which recency penalties decay in points per second")]
+	[Min(0)]
+	public float RecencyPenaltyDecayRate = 1f;
+
+	[Tooltip("The maximum recency penalty applied to gags")]
+	[Min(0)]
+	public float RecencyPenaltyMaximum = 100f;
+
+	private readonly Dictionary<string, float> _recencyPenalties = new();
+
+	public IReadOnlyDictionary<string, float> RecencyPenalties => this._recencyPenalties;
+
+	private float GetRecencyPenalty(GagSource.Gag gag)
 	{
-		return gag.BasePoints;
+		return this.RecencyPenalties.ContainsKey(gag.Type) ? this.RecencyPenalties[gag.Type] : 0;
+	}
+
+	private void UpdateRecencyPenalties(float delta_time)
+	{
+		foreach (var key in this.RecencyPenalties.Keys)
+			this._recencyPenalties[key] = Mathf.Max(0, this._recencyPenalties[key] - this.RecencyPenaltyDecayRate * delta_time);
+	}
+
+	private void IncrementRecencyPenalty(GagSource.Gag gag)
+	{
+		if (!this.RecencyPenalties.ContainsKey(gag.Type))
+			this._recencyPenalties.Add(gag.Type, 0);
+		this._recencyPenalties[gag.Type] = Mathf.Min(this.RecencyPenaltyMaximum, this._recencyPenalties[gag.Type] + this.RecencyPenaltyIncrement);
+	}
+	#endregion
+
+	private float ScoreGag(GagSource.Gag gag)
+	{
+		float recency_penalty = this.GetRecencyPenalty(gag);
+		return Mathf.Max(0, gag.BasePoints - recency_penalty);
 	}
 
 	public void AddGag(GagSource.Gag gag)
 	{
 		float points = this.ScoreGag(gag);
+		this.IncrementRecencyPenalty(gag);
 		this._gagHistory.Add(new(gag, points));
+	}
+
+	private void Update()
+	{
+		this.UpdateRecencyPenalties(Time.deltaTime);
 	}
 
 	private void Awake()

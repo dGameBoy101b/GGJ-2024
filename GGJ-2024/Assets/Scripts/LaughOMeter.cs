@@ -34,11 +34,11 @@ public class LaughOMeter : MonoBehaviour
 			LaughOMeter.Instance = null;
 	}
 
-	public struct GagEvent
+	public readonly struct GagEvent
 	{
-		Gag Gag;
-		float Time;
-		float Points;
+		readonly Gag Gag;
+		readonly float Time;
+		readonly float Points;
 
 		public GagEvent(Gag gag, float points)
 		{
@@ -48,7 +48,7 @@ public class LaughOMeter : MonoBehaviour
 		}
 	}
 
-	private List<GagEvent> _gagHistory = new();
+	private readonly List<GagEvent> _gagHistory = new();
 
 	public IReadOnlyCollection<GagEvent> GagHistory => this._gagHistory;
 

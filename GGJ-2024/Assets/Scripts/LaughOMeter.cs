@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,35 @@ public class LaughOMeter : MonoBehaviour
 	{
 		if (LaughOMeter.Instance == this)
 			LaughOMeter.Instance = null;
+	}
+
+	public struct GagEvent
+	{
+		Gag Gag;
+		float Time;
+		float Points;
+
+		public GagEvent(Gag gag, float points)
+		{
+			this.Gag = gag;
+			this.Points = points;
+			this.Time = UnityEngine.Time.time;
+		}
+	}
+
+	private List<GagEvent> _gagHistory = new();
+
+	public IReadOnlyCollection<GagEvent> GagHistory => this._gagHistory;
+
+	private float ScoreGag(Gag gag) //stub
+	{
+		return 0;
+	}
+
+	public void AddGag(Gag gag)
+	{
+		float points = this.ScoreGag(gag);
+		this._gagHistory.Add(new(gag, points));
 	}
 
 	private void Awake()

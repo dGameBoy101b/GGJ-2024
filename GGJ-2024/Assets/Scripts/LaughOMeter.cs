@@ -16,7 +16,7 @@ public class LaughOMeter : MonoBehaviour
 	public float PointsMaximum = 100f;
 
 	[Tooltip("The number of points initially on the laugh o meter")]
-	private float InitialPoints = 0f;
+	public float InitialPoints = 0f;
 
 	public float CurrentPoints { get; private set; }
 
@@ -32,6 +32,16 @@ public class LaughOMeter : MonoBehaviour
 	}
 
 	private void UpdateSlider()
+	{
+		this.Slider.value = this.CurrentPoints;
+	}
+
+	private void InitialisePoints()
+	{
+		this.CurrentPoints = this.InitialPoints;
+	}
+
+	private void InitialiseSlider()
 	{
 		this.Slider.maxValue = this.PointsMaximum;
 		this.Slider.minValue = this.PointsMinimum;
@@ -141,7 +151,8 @@ public class LaughOMeter : MonoBehaviour
 	private void Awake()
 	{
 		this.SetSingletonInstance();
-		this.CurrentPoints = this.InitialPoints;
+		this.InitialisePoints();
+		this.InitialiseSlider();
 	}
 
 	private void OnDestroy()

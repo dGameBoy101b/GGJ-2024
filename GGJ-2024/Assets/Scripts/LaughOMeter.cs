@@ -161,7 +161,7 @@ public class LaughOMeter : MonoBehaviour
 	}
 	#endregion
 
-	#region Events
+	#region Event Hooks
 	[Header("Events")]
 	[Tooltip("Invoked when a gag is performed with the number of points scored from it.\nFailed gags will have negative points")]
 	public UnityEvent<float> OnGagAdded = new();
@@ -173,6 +173,7 @@ public class LaughOMeter : MonoBehaviour
 	public UnityEvent OnHitMinimum = new();
 	#endregion
 
+	#region Events
 	private void Update()
 	{
 		this.UpdatePoints(Time.deltaTime);
@@ -191,4 +192,5 @@ public class LaughOMeter : MonoBehaviour
 	{
 		this.ResetSingletonInstance();
 	}
+	#endregion
 }

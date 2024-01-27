@@ -534,11 +534,68 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1252113503109926192}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WinterwireGames.SceneManagement.Quitter, Root
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1698926170487316746, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1252113503109926192}
   m_SourcePrefab: {fileID: 100100000, guid: 5ec8e647b55d33d428a1d11d36e9a53a, type: 3}
+--- !u!1 &1957479157292351700 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1698926170487316746, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+    type: 3}
+  m_PrefabInstance: {fileID: 916923110138487262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1252113503109926192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957479157292351700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31aa3c0c96658c4449e6cf6c593ba024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4860969821618139961 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5750026872282403559, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
@@ -663,11 +720,71 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 922136089846373870}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WinterwireGames.SceneManagement.SceneLoader, Root
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1698926170487316746, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 922136089846373870}
   m_SourcePrefab: {fileID: 100100000, guid: 5ec8e647b55d33d428a1d11d36e9a53a, type: 3}
+--- !u!1 &1925967743880764729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1698926170487316746, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+    type: 3}
+  m_PrefabInstance: {fileID: 948470808112364595}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &922136089846373870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925967743880764729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961637ab4a12dfa4d84b90c7171bf8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScenePath: Assets/Scenes/Credits.unity
+  Mode: 0
+  ShouldBlockActivation: 0
 --- !u!224 &4820425917489393364 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5750026872282403559, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
@@ -792,10 +909,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4689489263328280679}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WinterwireGames.SceneManagement.SceneLoader, Root
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318600910954042262, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1698926170487316746, guid: 5ec8e647b55d33d428a1d11d36e9a53a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4689489263328280679}
   m_SourcePrefab: {fileID: 100100000, guid: 5ec8e647b55d33d428a1d11d36e9a53a, type: 3}
 --- !u!224 &1939498098622656209 stripped
 RectTransform:
@@ -809,6 +965,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6135672661816458294}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4689489263328280679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4806895094465027388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961637ab4a12dfa4d84b90c7171bf8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScenePath: Assets/Scenes/Level 1.unity
+  Mode: 0
+  ShouldBlockActivation: 0
 --- !u!1001 &9016610065541892414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -927,8 +1098,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2376deb6978350d42b1d70d116bb8600, type: 3}
---- !u!224 &5097571823211937582 stripped
-RectTransform:
+--- !u!4 &5097571823211937582 stripped
+Transform:
   m_CorrespondingSourceObject: {fileID: 4296250999602968080, guid: 2376deb6978350d42b1d70d116bb8600,
     type: 3}
   m_PrefabInstance: {fileID: 9016610065541892414}

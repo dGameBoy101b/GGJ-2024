@@ -287,6 +287,11 @@ PrefabInstance:
       propertyPath: OnHitMinimum.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7429025735844948305, guid: 285a47677d6e81c4998944c6ffe0d5a7,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8747945986006757151, guid: 285a47677d6e81c4998944c6ffe0d5a7,
         type: 3}
       propertyPath: m_AnchorMax.x

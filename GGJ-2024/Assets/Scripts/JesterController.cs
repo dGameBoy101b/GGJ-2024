@@ -10,13 +10,27 @@ public class JesterController : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float movementForce;
     [SerializeField] private float hoverForce;
+    [SerializeField] private float turnTorque;
     [SerializeField] private Transform hip;
+    [SerializeField] private float hipHeight;
     
     private Vector3 direction;
     private void FixedUpdate()
     {
         rb.AddForce(direction * movementForce, ForceMode.Force);
-        rb.AddForce( 0, (1.5f - hip.position.y) * hoverForce, 0, ForceMode.Force);
+        rb.AddForce( 0, (hipHeight - hip.position.y) * hoverForce, 0, ForceMode.Force);
+        
+        Vector2 forward = new Vector2(0,0);
+        forward.x = rb.transform.forward.x;
+        forward.y = rb.transform.forward.z;
+
+        Vector2 target = forward;
+        target.x = direction.x;
+        target.y = direction.z;
+        
+        float torque = Vector2.SignedAngle(target, forward);
+        
+        rb.AddTorque(0,torque * turnTorque,0, ForceMode.Force);
     }
 
 

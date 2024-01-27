@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ceiling
   - Water
   - UI
   - Floor
@@ -17,7 +17,7 @@ TagManager:
   - Royalty
   - Wall
   - Slippery
-  - 
+  - Jester
   - 
   - 
   - 

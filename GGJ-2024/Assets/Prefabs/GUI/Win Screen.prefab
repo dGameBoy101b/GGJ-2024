@@ -212,6 +212,8 @@ GameObject:
   - component: {fileID: 8834474646179232610}
   - component: {fileID: 1242221137758702645}
   - component: {fileID: 2331279741525218427}
+  - component: {fileID: 3274463663814825106}
+  - component: {fileID: 6682190132116933686}
   m_Layer: 0
   m_Name: Win Screen
   m_TagString: Untagged
@@ -388,9 +390,63 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 1a1cabad-de30-419b-ac7e-dd3050f67406
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3274463663814825106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7869156069548487575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0d0023da1515f4cbf0a0bf133c0add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6682190132116933686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7869156069548487575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a01284f6d289142b5a02760310dbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3274463663814825106}
+        m_TargetAssemblyTypeName: TimeScaler, Root
+        m_MethodName: ScaleTime
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3274463663814825106}
+        m_TargetAssemblyTypeName: TimeScaler, Root
+        m_MethodName: Revert
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &69004898520431444
 PrefabInstance:
   m_ObjectHideFlags: 0

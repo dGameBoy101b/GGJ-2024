@@ -149,6 +149,8 @@ GameObject:
   - component: {fileID: 5965356190222218264}
   - component: {fileID: 4299034759852698694}
   - component: {fileID: 1577598327626220950}
+  - component: {fileID: 5201898307287705477}
+  - component: {fileID: 4702031876084907742}
   m_Layer: 0
   m_Name: Lose Screen
   m_TagString: Untagged
@@ -325,9 +327,63 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 1a1cabad-de30-419b-ac7e-dd3050f67406
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &5201898307287705477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303755181029151278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0d0023da1515f4cbf0a0bf133c0add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4702031876084907742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303755181029151278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a01284f6d289142b5a02760310dbbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5201898307287705477}
+        m_TargetAssemblyTypeName: TimeScaler, Root
+        m_MethodName: ScaleTime
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5201898307287705477}
+        m_TargetAssemblyTypeName: TimeScaler, Root
+        m_MethodName: Revert
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4597284393284917165
 GameObject:
   m_ObjectHideFlags: 0

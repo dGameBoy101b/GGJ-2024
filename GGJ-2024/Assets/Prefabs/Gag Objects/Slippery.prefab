@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 942550543170142167}
   - component: {fileID: 7228087820803130333}
   m_Layer: 11
-  m_Name: Slippery Object
+  m_Name: Slippery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

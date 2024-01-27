@@ -197,6 +197,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "253a28bfb29f40b3b7e7a4345d3e2443"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "d24ee98230a74618a19b0adf4fd2c85b"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "287fb0a2e2a04602892ea8b848b2ad44"
                 },
                 "m_SlotId": 0
@@ -582,20 +596,6 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "cb90507fef7f47d78667831e59cf80f5"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "e4bd4c8781d147ac89ad4dd291db6bf7"
-                },
-                "m_SlotId": 3
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "d24ee98230a74618a19b0adf4fd2c85b"
                 },
                 "m_SlotId": 0
             }
@@ -1141,10 +1141,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -40.6666374206543,
-            "y": 408.66668701171877,
-            "width": 209.3333282470703,
-            "height": 327.99993896484377
+            "x": -84.56240844726563,
+            "y": 155.4373779296875,
+            "width": 208.0,
+            "height": 326.0
         }
     },
     "m_Slots": [
@@ -3841,10 +3841,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -333.9999694824219,
-            "y": 432.66668701171877,
-            "width": 209.33326721191407,
-            "height": 303.99993896484377
+            "x": -347.0000305175781,
+            "y": 193.0,
+            "width": 208.0001220703125,
+            "height": 301.9999694824219
         }
     },
     "m_Slots": [
@@ -4125,7 +4125,7 @@
     "m_ShaderOutputName": "Edge2",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.5,
+        "x": 0.6000000238418579,
         "y": 1.0,
         "z": 1.0,
         "w": 1.0
@@ -4639,7 +4639,7 @@
     "m_ShaderOutputName": "Edge1",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.44999998807907107,
+        "x": 0.5,
         "y": 0.0,
         "z": 0.0,
         "w": 0.0

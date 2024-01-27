@@ -194,20 +194,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "253a28bfb29f40b3b7e7a4345d3e2443"
-                },
-                "m_SlotId": 3
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "4c33572aced547f4ac586666a083817d"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "283c0a4fb15e4b4799897334089c180f"
                 },
                 "m_SlotId": 6
@@ -369,6 +355,20 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "253a28bfb29f40b3b7e7a4345d3e2443"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "7235bbe9705844a5a6ba744462efac99"
+                },
+                "m_SlotId": 2
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "4c33572aced547f4ac586666a083817d"
                 },
                 "m_SlotId": 0
             }

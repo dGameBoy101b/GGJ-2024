@@ -1034,12 +1034,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621009123}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &641025706 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8580863016205084588, guid: dd9b6c3c770156843bcd35c203c6810c,
-    type: 3}
-  m_PrefabInstance: {fileID: 8681331591887715034}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &673376833
 GameObject:
   m_ObjectHideFlags: 0
@@ -20695,56 +20689,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1008943505772854531, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: m_Drag
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1008943505772854531, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1008943505772854531, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 84
-      objectReference: {fileID: 0}
-    - target: {fileID: 1008943505772854531, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1366192423372489359, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: hip
-      value: 
-      objectReference: {fileID: 641025706}
-    - target: {fileID: 1366192423372489359, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: hoverForce
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1366192423372489359, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: movementForce
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 1533861708849668044, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1533861708849668044, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1533861708849668044, guid: dd9b6c3c770156843bcd35c203c6810c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1533861708849668044, guid: dd9b6c3c770156843bcd35c203c6810c,
         type: 3}
       propertyPath: m_LocalPosition.x

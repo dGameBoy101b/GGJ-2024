@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: InkShaded 4
+  m_Name: Metal
   m_Shader: {fileID: -6465566751694194690, guid: 771d1b4e30fa81a45bb5e1880e3447e5,
     type: 3}
   m_Parent: {fileID: 0}
@@ -74,5 +74,5 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.54088044, g: 0.41486055, b: 0.26363668, a: 0}
+    - _Color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 0}
   m_BuildTextureStacks: []

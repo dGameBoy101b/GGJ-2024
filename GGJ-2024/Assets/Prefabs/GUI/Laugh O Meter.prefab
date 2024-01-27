@@ -270,11 +270,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1710462839
+      Data2: 1103650060
+      Data3: 1236642457
+      Data4: 94016879
+    Path: event:/Sound Effects/Gag Reaction
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -282,10 +282,12 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   AllowNonRigidbodyDoppler: 0
-  Params: []
+  Params:
+  - Name: Gag Points
+    Value: 0
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &296330144844351654
 MonoBehaviour:
   m_ObjectHideFlags: 0

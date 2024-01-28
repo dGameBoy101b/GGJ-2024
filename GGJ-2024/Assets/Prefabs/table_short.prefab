@@ -240,6 +240,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3311388714232086936}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 487608153f4f266488e1007062e42b61,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5375221305870043388}
   m_SourcePrefab: {fileID: 100100000, guid: 487608153f4f266488e1007062e42b61, type: 3}
 --- !u!1 &3692530844819123324 stripped
 GameObject:
@@ -268,6 +272,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 680.1359, y: 132.14635, z: 276.81738}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5375221305870043388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692530844819123324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1314891279
+      Data2: 1175199320
+      Data3: 583737756
+      Data4: 598251677
+    Path: event:/Sound Effects/Environment Interaction
+  Event: 
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: Material
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &4068247525187761862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 487608153f4f266488e1007062e42b61,

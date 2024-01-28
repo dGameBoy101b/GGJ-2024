@@ -222,7 +222,7 @@ MonoBehaviour:
   FailMask:
     serializedVersion: 2
     m_Bits: 0
-  Cooldown: 0.1
+  Cooldown: 0.5
   OnSuccess:
     m_PersistentCalls:
       m_Calls: []

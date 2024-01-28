@@ -59,7 +59,11 @@
 			<destination>{02f433c2-7530-42b9-bfaf-22d751fd37b8}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{d0435965-1725-4448-882f-30102fa7cab4}" />
+	<object class="EventAutomatableProperties" id="{d0435965-1725-4448-882f-30102fa7cab4}">
+		<property name="priority">
+			<value>4</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{eb4796e9-ec47-4bc3-912e-6543c8d6d0f1}" />
 	<object class="GroupTrack" id="{1553d8ab-2c13-4a80-90f7-045bc441bb5d}">
 		<relationship name="modules">
@@ -84,9 +88,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f6bb64ff-fa1d-4be1-8e70-6460d7bcf8ce}">
-		<property name="volume">
-			<value>-8</value>
-		</property>
 		<relationship name="effectChain">
 			<destination>{47e50d8e-1c49-4f5d-8a3d-bc467fd68f68}</destination>
 		</relationship>
@@ -121,6 +122,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b9a27658-6f20-41aa-9278-7cc65b3697ac}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="name">
 			<value>success</value>
 		</property>
@@ -152,6 +156,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{55c352c2-b8ea-4ffe-9963-3bac92a5e4a8}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="name">
 			<value>fail</value>
 		</property>

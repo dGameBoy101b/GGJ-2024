@@ -433,7 +433,7 @@ MonoBehaviour:
   PointsMaximum: 100
   InitialPoints: 0
   PointsDrainRate: 5
-  RecencyPenaltyIncrement: 1
+  RecencyPenaltyIncrement: 0
   RecencyPenaltyDecayRate: 1
   RecencyPenaltyMaximum: 100
   OnGagAdded:

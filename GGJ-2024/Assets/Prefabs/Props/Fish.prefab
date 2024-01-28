@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GagType: Knockdown
-  BasePoints: 5
+  BasePoints: 10
   SuccessMask:
     serializedVersion: 2
     m_Bits: 64

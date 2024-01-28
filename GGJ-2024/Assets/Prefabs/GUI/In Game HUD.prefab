@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7429025735844948305}
   - component: {fileID: 6758259484475928640}
   - component: {fileID: 7976374818656073029}
+  - component: {fileID: 1122563644614946038}
   m_Layer: 5
   m_Name: In Game HUD
   m_TagString: Untagged
@@ -103,6 +104,39 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1122563644614946038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5773794122888114568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1745419386
+      Data2: 1300118792
+      Data3: -1734261625
+      Data4: 1287801515
+    Path: event:/Sound Effects/King Level Speech
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: Level Complete
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &95304012468530724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,6 +145,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 604396798843680519}
     m_Modifications:
+    - target: {fileID: 574444061114131493, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.052331794
+      objectReference: {fileID: 0}
+    - target: {fileID: 574444061114131493, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.052331794
+      objectReference: {fileID: 0}
+    - target: {fileID: 574444061114131493, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.2264151
+      objectReference: {fileID: 0}
     - target: {fileID: 2529686056346007426, guid: 116d9fdbfd80db547883d596532f4c61,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -175,6 +224,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Laugh O Meter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443876612889740268, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.20392154
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443876612889740268, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.20819458
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443876612889740268, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.69411767
       objectReference: {fileID: 0}
     - target: {fileID: 8661658999703699771, guid: 116d9fdbfd80db547883d596532f4c61,
         type: 3}
@@ -283,12 +347,12 @@ PrefabInstance:
     - target: {fileID: 4112467919725471448, guid: c00eb3c028c58e642a8bde42778b3e67,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -311.8
       objectReference: {fileID: 0}
     - target: {fileID: 4112467919725471448, guid: c00eb3c028c58e642a8bde42778b3e67,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -64
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 4112467919725471448, guid: c00eb3c028c58e642a8bde42778b3e67,
         type: 3}

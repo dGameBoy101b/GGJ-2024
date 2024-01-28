@@ -692,11 +692,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7547450614646216693, guid: 8ccabe552cfbc0e43924c6a64bb3f308,
-        type: 3}
-      propertyPath: ScenePath
-      value: Assets/Scenes/Credits.unity
-      objectReference: {fileID: 0}
     - target: {fileID: 7869156069548487575, guid: 8ccabe552cfbc0e43924c6a64bb3f308,
         type: 3}
       propertyPath: m_Name

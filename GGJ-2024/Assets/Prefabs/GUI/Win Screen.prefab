@@ -764,7 +764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961637ab4a12dfa4d84b90c7171bf8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScenePath: 
+  ScenePath: Assets/Scenes/Main Menu.unity
   Mode: 0
   ShouldBlockActivation: 0
 --- !u!224 &5708617570283006387 stripped

@@ -145,6 +145,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 604396798843680519}
     m_Modifications:
+    - target: {fileID: 574444061114131493, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.052331794
+      objectReference: {fileID: 0}
+    - target: {fileID: 574444061114131493, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.052331794
+      objectReference: {fileID: 0}
+    - target: {fileID: 574444061114131493, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.2264151
+      objectReference: {fileID: 0}
     - target: {fileID: 2529686056346007426, guid: 116d9fdbfd80db547883d596532f4c61,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -209,6 +224,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Laugh O Meter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443876612889740268, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.20392154
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443876612889740268, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.20819458
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443876612889740268, guid: 116d9fdbfd80db547883d596532f4c61,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.69411767
       objectReference: {fileID: 0}
     - target: {fileID: 8661658999703699771, guid: 116d9fdbfd80db547883d596532f4c61,
         type: 3}
@@ -317,12 +347,12 @@ PrefabInstance:
     - target: {fileID: 4112467919725471448, guid: c00eb3c028c58e642a8bde42778b3e67,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -311.8
       objectReference: {fileID: 0}
     - target: {fileID: 4112467919725471448, guid: c00eb3c028c58e642a8bde42778b3e67,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -64
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 4112467919725471448, guid: c00eb3c028c58e642a8bde42778b3e67,
         type: 3}

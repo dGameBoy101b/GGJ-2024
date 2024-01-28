@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.dgameboy101b.animatorparameters": {
+      "version": "https://github.com/dGameBoy101b/com.dgameboy101b.animatorparameters.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d5ba81e4a9bbc2b93401691b5ef3b5532e7c68bb"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,

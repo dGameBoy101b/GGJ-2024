@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 313144205102039585}
   - component: {fileID: 1026685793694131967}
+  - component: {fileID: 2899432141663226667}
   m_Layer: 0
   m_Name: Level Music
   m_TagString: Untagged
@@ -52,6 +53,37 @@ MonoBehaviour:
       Data3: 390043064
       Data4: -897293176
     Path: event:/Music/Level Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2899432141663226667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4779168396184808152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1185336526
+      Data2: 1102033905
+      Data3: -1960235081
+      Data4: -225460918
+    Path: event:/Sound Effects/Crowd Ambience
   Event: 
   PlayEvent: 1
   StopEvent: 2

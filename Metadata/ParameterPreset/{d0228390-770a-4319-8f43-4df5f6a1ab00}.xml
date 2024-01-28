@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d0228390-770a-4319-8f43-4df5f6a1ab00}">
+		<property name="name">
+			<value>Level Complete</value>
+		</property>
+		<relationship name="folder">
+			<destination>{165acec4-5554-4415-ab43-1d0edefd373a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{25ef0232-8c23-43b5-8c32-f613bc67a27a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{25ef0232-8c23-43b5-8c32-f613bc67a27a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Success</value>
+			<value>Fail</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

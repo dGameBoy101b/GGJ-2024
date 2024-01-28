@@ -28,6 +28,7 @@ public class CollisionGagSource : GagSource
 			return;
 		bool is_success = this.SuccessMask.HasLayer(collision.gameObject.layer);
 		bool is_fail = this.FailMask.HasLayer(collision.gameObject.layer);
+		Debug.Log("success:"+is_success+", fail:"+is_fail, this);
 		if (is_success || is_fail)
 			this.CooldownEndTime = Time.time + this.Cooldown;
 		if (is_success)
@@ -44,6 +45,7 @@ public class CollisionGagSource : GagSource
 
 	private void OnCollisionEnter(Collision collision)
 	{
+		Debug.Log("Gag collision detected", this);
 		this.CheckCollision(collision);
 	}
 }

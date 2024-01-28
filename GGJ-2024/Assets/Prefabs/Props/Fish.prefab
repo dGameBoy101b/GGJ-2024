@@ -176,7 +176,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7468997985950130546}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -184,11 +184,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1314891279
-      Data2: 1175199320
-      Data3: 583737756
-      Data4: 598251677
-    Path: event:/Sound Effects/Environment Interaction
+      Data1: -447551192
+      Data2: 1337544605
+      Data3: -1150422096
+      Data4: -817797527
+    Path: event:/Sound Effects/Food Ineraction
   Event: 
   PlayEvent: 7
   StopEvent: 0
@@ -196,9 +196,7 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   AllowNonRigidbodyDoppler: 0
-  Params:
-  - Name: Material
-    Value: 0
+  Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20

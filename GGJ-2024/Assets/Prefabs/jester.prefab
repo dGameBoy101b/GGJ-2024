@@ -3487,6 +3487,9 @@ MonoBehaviour:
   hipHeight: 2.5
   animator: {fileID: 3803561876759993017}
   HeadbutCollider: {fileID: 7915520407446490592}
+  OnHeadbut:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1294663875321126652
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class JesterController : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class JesterController : MonoBehaviour
 
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject HeadbutCollider;
+    
+    public UnityEvent OnHeadbut = new();
     
     private Vector3 direction;
     private void FixedUpdate()
@@ -47,6 +50,7 @@ public class JesterController : MonoBehaviour
     {
         if (movementValue.isPressed)
         {
+            OnHeadbut.Invoke();
             animator.SetTrigger("Headbut");
             StartCoroutine(Headbut());
         }

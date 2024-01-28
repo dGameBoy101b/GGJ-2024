@@ -29,7 +29,6 @@ public class GagSource : MonoBehaviour
 
 	public void SendGag(bool failed)
 	{
-		Debug.Log("Gag sent", this);
 		Gag gag = new(this, this.BasePoints, this.GagType, failed);
 		LaughOMeter.Instance.AddGag(gag);
 	}

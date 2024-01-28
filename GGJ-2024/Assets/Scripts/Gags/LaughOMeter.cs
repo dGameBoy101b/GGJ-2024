@@ -118,6 +118,7 @@ public class LaughOMeter : MonoBehaviour
 		this.IncrementRecencyPenalty(gag);
 		this._gagHistory.Add(new(gag, points));
 		this.AddPoints(points);
+		Debug.Log("gag scored: " + points, this);
 		this.OnGagAdded.Invoke(points);
 	}
 	#endregion
@@ -147,7 +148,8 @@ public class LaughOMeter : MonoBehaviour
 
 	private void UpdateRecencyPenalties(float delta_time)
 	{
-		foreach (var key in this.RecencyPenalties.Keys)
+		var keys = new List<string>(this.RecencyPenalties.Keys);
+		foreach (var key in keys)
 			this._recencyPenalties[key] = Mathf.Max(0, this._recencyPenalties[key] - this.RecencyPenaltyDecayRate * delta_time);
 	}
 

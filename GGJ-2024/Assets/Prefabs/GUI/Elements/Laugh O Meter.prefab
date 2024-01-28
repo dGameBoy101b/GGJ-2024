@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 4972083501499917707}
   - component: {fileID: 6407574695956216687}
   - component: {fileID: 7156554716516917125}
+  - component: {fileID: 7303891308563115409}
   m_Layer: 0
   m_Name: LaughIcon
   m_TagString: Untagged
@@ -232,6 +233,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7303891308563115409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263065775228036134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40e17584d59ffe43a544d9e7f167b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 7156554716516917125}
+  ParameterName: Laugh O Meter
 --- !u!1 &2102502365803327484
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +404,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 7303891308563115409}
+        m_TargetAssemblyTypeName: dGameBoy101b.AnimatorParameters.FloatAnimatorParameter,
+          dGameBoy101b.AnimatorParameters
+        m_MethodName: set_Value
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6461459190190865515
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5f8aa310-43d9-4e98-a954-d0dc5dd8a317}">
+		<property name="assetPath">
+			<value>SFX/Laf o Metr/laf-o-metr-up-1-07.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.33845804988662131</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{510d2e55-f4cc-4b22-be79-4ccd2cc66253}</destination>
+		</relationship>
+	</object>
+</objects>
